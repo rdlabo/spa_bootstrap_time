@@ -27,6 +27,4 @@ $ npm run dev
  
 
 ## React v15.3.1 ( bundle with webpack )
-   
    use react/index.html
-~~~~
