@@ -8,14 +8,6 @@ compare angular2,Ionic2,OnsenUI2,React,Riot,Vue...
     $ cd angular-2.0
     $ ng serve
 
-
-### build distribution
-
-  $ ng build --prod --bh ./
-
- > [angular/angular\-cli: CLI tool for Angular2](https://github.com/angular/angular-cli#prerequisites)
-
- 
 ## Ionic2 (using ionic)
     $ npm install -g ionic
     $ cd Ionic2-beta11
@@ -47,3 +39,12 @@ $ webpack main.js bundle.js --module-bind 'js=babel-loader'
 ~~~~
 
 > [Using React from npm](https://facebook.github.io/react/docs/package-management.html#using-react-from-npm)
+
+## Riot v2.6.1
+
+~~~
+$ cd riot-2.6.1
+$ npm install
+$ npm run build
+~~~
+
