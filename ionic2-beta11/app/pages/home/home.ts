@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 
 @Component({
-  template: 'Hello World!'
+  template: '<ion-content>Hello World!</ion-content>'
 })
 export class HomePage {
   constructor() {
