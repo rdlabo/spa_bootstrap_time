@@ -13,30 +13,58 @@
   <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
   <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
 </head>
+<style>
+  .panel-body{
+    padding:0;
+  }
+
+  .jsframeworks {
+    height: 400px;
+    width:100%;
+  }
+
+</style>
 <body>
 <h1>JS Framework compare tool</h1>
 
-<div class="row">
-  <div class="col-xs-12 col-md-3">
-
+<div class="row ">
+  <div class="col-xs-3 col-md-3">
     <div class="panel panel-default panel-react">
       <div class="panel-heading">React</div>
       <div class="panel-body">
-        <iframe src="react/index.html" frameborder="0"></iframe>
+        <iframe src="react/index.html" frameborder="0" class="jsframeworks"></iframe>
       </div>
     </div>
-
+  </div>
+  <div class="col-xs-3 col-md-3">
     <div class="panel panel-default panel-vue">
       <div class="panel-heading">vue.js(1.0)</div>
       <div class="panel-body">
-        <iframe src="vue-1.0/dist/index.html" frameborder="0"></iframe>
+        <iframe src="vue-1.0/dist/index.html" frameborder="0" class="jsframeworks"></iframe>
       </div>
     </div>
-
   </div>
+  <div class="col-xs-3 col-md-3">
+    <div class="panel panel-default panel-angular2">
+      <div class="panel-heading">angular2</div>
+      <div class="panel-body">
+        <iframe src="angular-2.0/dist/index.html" frameborder="0" class="jsframeworks"></iframe>
+      </div>
+    </div>
+  </div>
+  <div class="col-xs-3 col-md-3">
+    <div class="panel panel-default panel-ionic2">
+      <div class="panel-heading">ionic2-beta11</div>
+      <div class="panel-body">
+        <iframe src="ionic2-beta11/dist/index.html" frameborder="0" class="jsframeworks"></iframe>
+      </div>
+    </div>
+  </div>
+
 </div>
 
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script></body>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+</body>
 </html>
