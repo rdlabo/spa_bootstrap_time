@@ -25,3 +25,18 @@ $ npm run dev
 
   [vue-CLI](http://vuejs.org/guide/installation.html#CLI)
  
+
+## React v15.3.1 ( bundle with webpack )
+   
+   use react/index.html
+<<<<<<< HEAD
+=======
+
+### how to build
+
+~~~~
+npm install webpack -g
+npm install --save react react-dom babel-preset-react babel-loader babel-core
+webpack main.js bundle.js --module-bind 'js=babel-loader'
+>>>>>>> 03c3442... add react description.
+~~~~
