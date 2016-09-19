@@ -4,32 +4,32 @@ var gulp   = require('gulp'),
     babel  = require('gulp-babel');
 
 gulp.task('babel', () => {
-   return gulp.src('src/js/*.js')
+   return gulp.src('build/js/*.js')
       .pipe(babel())
-      .pipe(gulp.dest('src/'))
+      .pipe(gulp.dest('build/'))
 })
 
 gulp.task('eslint', () => {
-   return gulp.src('src/*.js')
+   return gulp.src('build/*.js')
       .pipe(eslint( { useEslintrc: false } ))
       .pipe(eslint.format());
 });
 
 gulp.task('riot', () => {
-  return gulp.src('src/tag/*.jade')
+  return gulp.src('build/tag/*.jade')
       .pipe(riot({ template: 'jade' }))
-      .pipe(gulp.dest('src/dest'))
+      .pipe(gulp.dest('build/dest'))
 })
 
 gulp.task('watch', () => {
-   gulp.watch('src/js/*.js', () => {
+   gulp.watch('build/js/*.js', () => {
       gulp.run('babel')
    })
 
-   gulp.watch('src/*.js', () => {
+   gulp.watch('build/*.js', () => {
       gulp.run('eslint')
    })
-   gulp.watch('src/tag/*.jade', () => {
+   gulp.watch('build/tag/*.jade', () => {
       gulp.run('riot')
    })
 })
