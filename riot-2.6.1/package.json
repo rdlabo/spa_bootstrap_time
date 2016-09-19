@@ -5,7 +5,7 @@
   "author": "@kuwahara_jsri",
   "private": true,
   "scripts": {
-    "build": "node src/app"
+    "build": "node build/app"
   },
   "dependencies": {
     "riot": "^2.6.1"
