@@ -2741,13 +2741,7 @@
 	var riot = __webpack_require__(1);
 
 
-	riot.tag2('app', '<h1>{opts.message}</h1> <button type="button" onclick="{datetime}">get datetime</button> <div each="{items}"> <h3>{now}</h3> </div>', '', '', function(opts) {
-	      this.items = []
-
-	      this.datetime = function(event) {
-	        var date = new Date()
-	        this.items.push({ now: date })
-	      }.bind(this)
+	riot.tag2('app', '<h1>{opts.message}</h1>', '', '', function(opts) {
 	});
 
 /***/ }
