@@ -8,7 +8,7 @@ module.exports = {
    },
    module: {
       loaders: [
-         { test: /\.tag$/, loader: 'tag', query:{ template: 'jade' }}
+         { test: /\.tag$/, exclude: /node_modules/, loader: 'tag', query:{ template: 'jade' }}
       ]
    }
 }
