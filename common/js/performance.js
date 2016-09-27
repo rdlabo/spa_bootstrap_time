@@ -10,6 +10,8 @@ function reportLoadperformance(name){
 			var total_render_time = window.performance.timing.loadEventStart - window.performance.timing.domLoading;
 
 			console.log( "total_download_time="+total_download_time);
+			console.log( "domLoading="+window.performance.timing.domLoading);
+			console.log( "loadEventStart="+window.performance.timing.loadEventStart);
 			console.log( "total_render_time="+total_render_time);
 
 			var heap_size_limit = window.performance.memory.jsHeapSizeLimit;
