@@ -56,7 +56,7 @@
       </thead>
       <tbody>
       <tr class="vuejs">
-        <td class="summary-label"><span class="frameworkname">vue.js</span></td>
+        <td class="summary-label"><span class="frameworkname">Vue.js</span></td>
         <td class="summary-val"><span class="total_download_time"></span></td>
         <td class="summary-val"><span class=" total_dom_time"></span></td>
         <td class="summary-val"><span class=" detect_hello_time"></span></td>
@@ -77,6 +77,26 @@
       </tr>
       <tr class="Riot">
         <td class="summary-label"><span class="frameworkname">Riot</span></td>
+        <td class="summary-val"><span class="total_download_time"></span></td>
+        <td class="summary-val"><span class=" total_dom_time"></span></td>
+        <td class="summary-val"><span class=" detect_hello_time"></span></td>
+        <td class="summary-val"><span class=" onload_time"></span></td>
+        <td class="summary-val"><span class=" heap_size_limit"></span></td>
+        <td class="summary-val"><span class=" total_heap_size"></span></td>
+        <td class="summary-val"><span class=" used_heap_size"></span></td>
+      </tr>
+      <tr class="angular2">
+        <td class="summary-label"><span class="frameworkname">Angular 2</span></td>
+        <td class="summary-val"><span class="total_download_time"></span></td>
+        <td class="summary-val"><span class=" total_dom_time"></span></td>
+        <td class="summary-val"><span class=" detect_hello_time"></span></td>
+        <td class="summary-val"><span class=" onload_time"></span></td>
+        <td class="summary-val"><span class=" heap_size_limit"></span></td>
+        <td class="summary-val"><span class=" total_heap_size"></span></td>
+        <td class="summary-val"><span class=" used_heap_size"></span></td>
+      </tr>
+      <tr class="ionic2">
+        <td class="summary-label"><span class="frameworkname">Ionic 2</span></td>
         <td class="summary-val"><span class="total_download_time"></span></td>
         <td class="summary-val"><span class=" total_dom_time"></span></td>
         <td class="summary-val"><span class=" detect_hello_time"></span></td>
@@ -158,11 +178,11 @@
 //            used_heap_size: used_heap_size,
 
   }
-  function formatInt(n) {
+  function formatInt(n){
     return commafy(parseInt(n));
   }
 
-  function commafy(n) {
+  function commafy(n){
     var parts = n.toString().split('.');
     parts[0] = parts[0].replace(/(\d)(?=(\d\d\d)+(?!\d))/g, '$1,');
     return parts.join('.');
