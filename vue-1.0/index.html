@@ -3,41 +3,13 @@
 <head>
   <meta charset="utf-8">
   <title>vue</title>
-  <script src="../../common/js/performance.min.js"></script>
 </head>
 <body>
 <app></app>
 <script>
-  console.log("app hook.");
-
-  //  var mutationobserver = new MutationObserver(function(){
-  //    console.log("mutation detected.");
-  //    reportLoadperformance('vue.js');
-  //  });
-
-  var nodebody = document.querySelector("body");
-  var mutationobserver = new MutationObserver(function(mutations){
-            var text = nodebody.innerText;
-//              console.log("mutation detected.");
-//              console.log("text" + text);
-
-              if( text.indexOf('Hello') >= 0 ){
-                console.log("hello appear.");
-                reportLoadperformance('vue.js');
-                mutationobserver.disconnect();
-              }
-//            for( var i = 0, len = mutations.length; i < len; i++ ){
-//              console.log(i + " " + mutations[i].type);
-//            }
-
-          })
-          ;
-
-    mutationobserver.observe(nodebody,
-                           {childList: true}
-  );
-
+  var frameworkname = "vuejs";
 </script>
+<script src="../../common/js/performance.min.js"></script>
 
 <!-- built files will be auto injected -->
 </body>
