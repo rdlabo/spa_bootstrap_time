@@ -15,8 +15,8 @@
 </head>
 <style>
   .row{
-     margin: 5px;
-   }
+    margin: 5px;
+  }
   .panel-body{
     padding: 0;
   }
@@ -25,12 +25,91 @@
     width: 100%;
   }
   .panel-default:hover{
-     box-shadow: 2px 2px 4px rgba(0,0,0,0.5);
-   }
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  }
+  .summary-label{
+    text-align: left;
+  }
+  .summary-val{
+    text-align: right;
+  }
 
 </style>
 <body>
 <h1>JS Framework compare</h1>
+<div class="row">
+  <div class="col-xs-12 col-md-6">
+
+    <table class="table table-bordered table-condensed table-hover summary">
+      <thead>
+      <tr>
+        <th>framework</th>
+        <th>download</th>
+        <th>dom</th>
+        <th>detect_hello</th>
+        <th>onload</th>
+        <th>heap_size_limit</th>
+        <th>total_heap_size</th>
+        <th>used_heap_size</th>
+
+      </tr>
+      </thead>
+      <tbody>
+      <tr class="vuejs">
+        <td class="summary-label"><span class="frameworkname">Vue.js</span></td>
+        <td class="summary-val"><span class="total_download_time"></span></td>
+        <td class="summary-val"><span class=" total_dom_time"></span></td>
+        <td class="summary-val"><span class=" detect_hello_time"></span></td>
+        <td class="summary-val"><span class=" onload_time"></span></td>
+        <td class="summary-val"><span class=" heap_size_limit"></span></td>
+        <td class="summary-val"><span class=" total_heap_size"></span></td>
+        <td class="summary-val"><span class=" used_heap_size"></span></td>
+      </tr>
+      <tr class="React">
+        <td class="summary-label"><span class="frameworkname">React</span></td>
+        <td class="summary-val"><span class="total_download_time"></span></td>
+        <td class="summary-val"><span class=" total_dom_time"></span></td>
+        <td class="summary-val"><span class=" detect_hello_time"></span></td>
+        <td class="summary-val"><span class=" onload_time"></span></td>
+        <td class="summary-val"><span class=" heap_size_limit"></span></td>
+        <td class="summary-val"><span class=" total_heap_size"></span></td>
+        <td class="summary-val"><span class=" used_heap_size"></span></td>
+      </tr>
+      <tr class="Riot">
+        <td class="summary-label"><span class="frameworkname">Riot</span></td>
+        <td class="summary-val"><span class="total_download_time"></span></td>
+        <td class="summary-val"><span class=" total_dom_time"></span></td>
+        <td class="summary-val"><span class=" detect_hello_time"></span></td>
+        <td class="summary-val"><span class=" onload_time"></span></td>
+        <td class="summary-val"><span class=" heap_size_limit"></span></td>
+        <td class="summary-val"><span class=" total_heap_size"></span></td>
+        <td class="summary-val"><span class=" used_heap_size"></span></td>
+      </tr>
+      <tr class="angular2">
+        <td class="summary-label"><span class="frameworkname">Angular 2</span></td>
+        <td class="summary-val"><span class="total_download_time"></span></td>
+        <td class="summary-val"><span class=" total_dom_time"></span></td>
+        <td class="summary-val"><span class=" detect_hello_time"></span></td>
+        <td class="summary-val"><span class=" onload_time"></span></td>
+        <td class="summary-val"><span class=" heap_size_limit"></span></td>
+        <td class="summary-val"><span class=" total_heap_size"></span></td>
+        <td class="summary-val"><span class=" used_heap_size"></span></td>
+      </tr>
+      <tr class="ionic2">
+        <td class="summary-label"><span class="frameworkname">Ionic 2</span></td>
+        <td class="summary-val"><span class="total_download_time"></span></td>
+        <td class="summary-val"><span class=" total_dom_time"></span></td>
+        <td class="summary-val"><span class=" detect_hello_time"></span></td>
+        <td class="summary-val"><span class=" onload_time"></span></td>
+        <td class="summary-val"><span class=" heap_size_limit"></span></td>
+        <td class="summary-val"><span class=" total_heap_size"></span></td>
+        <td class="summary-val"><span class=" used_heap_size"></span></td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
 
 <div class="row">
   <div class="col-xs-3 col-md-3">
@@ -73,11 +152,42 @@
       </div>
     </div>
   </div>
-
 </div>
 
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+<script>
+  function reportRenderPerformance(name, result){
+    console.debug("reportRenderPerformance " + name);
+    var sel = '.' + name + " .total_download_time";
+    $('.' + name + " .total_download_time").html(formatInt(result.total_download_time));
+    $('.' + name + " .total_dom_time").html(formatInt(result.total_dom_time));
+    $('.' + name + " .detect_hello_time").html(formatInt(result.detect_hello_time));
+    $('.' + name + " .onload_time").html(formatInt(result.onload_time));
+
+    $('.' + name + " .heap_size_limit").html(formatInt(result.heap_size_limit));
+    $('.' + name + " .total_heap_size").html(formatInt(result.total_heap_size));
+    $('.' + name + " .used_heap_size").html(formatInt(result.used_heap_size));
+//    total_download_time: total_download_time,
+//            total_dom_time:total_dom_time,
+//            detect_hello_time: detect_hello_time,
+//            onload_time:onload_time,
+//            heap_size_limit: heap_size_limit,
+//            total_heap_size: total_heap_size,
+//            used_heap_size: used_heap_size,
+
+  }
+  function formatInt(n){
+    return commafy(parseInt(n));
+  }
+
+  function commafy(n){
+    var parts = n.toString().split('.');
+    parts[0] = parts[0].replace(/(\d)(?=(\d\d\d)+(?!\d))/g, '$1,');
+    return parts.join('.');
+  }
+
+</script>
 </body>
 </html>

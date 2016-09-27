@@ -8,6 +8,16 @@ compare angular2,Ionic2,OnsenUI2,React,Riot,Vue...
     $ cd angular-2.0
     $ ng serve
 
+
+### build distribution
+
+~~~~
+  $ ng build --prod --bh ./
+~~~~
+
+ > [angular/angular\-cli: CLI tool for Angular2](https://github.com/angular/angular-cli#prerequisites)
+
+
 ## Ionic2 (using ionic)
     $ npm install -g ionic
     $ cd Ionic2-beta11
@@ -48,4 +58,8 @@ $ npm install
 $ webpack
 $ npm start
 ~~~
+
+# How to compare
+
+open index.html. 
 
