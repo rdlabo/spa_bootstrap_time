@@ -59,3 +59,7 @@ $ webpack
 $ npm start
 ~~~
 
+# How to compare
+
+open index.html. 
+
