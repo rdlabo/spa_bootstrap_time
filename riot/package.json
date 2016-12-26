@@ -1,0 +1,22 @@
+{
+  "name": "riot.js",
+  "version": "1.0.0",
+  "description": "A demo about Riot.js",
+  "author": "@kuwahara_jsri",
+  "private": true,
+  "scripts": {
+    "build": "webpack -d -w",
+    "start": "webpack-dev-server --progress --colors --port 8000"
+  },
+  "dependencies": {
+    "riot": "^3.0.5"
+  },
+  "devDependencies": {
+    "pug": "^2.0.0-beta6",
+    "riotjs-loader": "^3.0.0",
+    "tag-loader": "^0.3.0",
+    "tag-pug-loader": "^1.0.0",
+    "webpack": "^1.14.0",
+    "webpack-dev-server": "^1.16.2"
+  }
+}
