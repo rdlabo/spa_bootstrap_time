@@ -50,12 +50,12 @@ $ webpack main.js bundle.js --module-bind 'js=babel-loader'
 
 > [Using React from npm](https://facebook.github.io/react/docs/package-management.html#using-react-from-npm)
 
-## Riot v2.6.2 ( budle with webpack )
+## Riot v3.0.5 ( budle with webpack )
 
 ~~~
-$ cd riot-2.6.2
-$ npm install
-$ webpack
+$ cd riot
+$ npm i
+$ npm run build
 $ npm start
 ~~~
 
