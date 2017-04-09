@@ -5,18 +5,17 @@
   "author": "@kuwahara_jsri",
   "private": true,
   "scripts": {
-    "build": "webpack -d -w",
+    "build": "webpack --watch --progress",
     "start": "webpack-dev-server --progress --colors --port 8000"
   },
   "dependencies": {
-    "riot": "^3.0.5"
+    "riot": "^3.4.0"
   },
   "devDependencies": {
-    "pug": "^2.0.0-beta6",
-    "riotjs-loader": "^3.0.0",
-    "tag-loader": "^0.3.0",
-    "tag-pug-loader": "^1.0.0",
-    "webpack": "^1.14.0",
-    "webpack-dev-server": "^1.16.2"
+    "buble-loader": "^0.4.1",
+    "pug": "^2.0.0-beta11",
+    "riot-tag-loader": "^1.0.0",
+    "webpack": "^2.3.3",
+    "webpack-dev-server": "^2.4.2"
   }
 }

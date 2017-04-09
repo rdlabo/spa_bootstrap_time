@@ -1,5 +1,4 @@
-var riot = require('riot')
-require('../tag/app.tag')
+import '../tag/app.tag'
 
 riot.mount('app', { message: 'Hello World!!' })
 
